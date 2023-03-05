@@ -3,14 +3,16 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <RouterView />
+  <div class="mx-3">
+    <header>
+      <div class="wrapper">
+        <nav class="flex justify-center py-3">
+          <RouterLink to="/">Home</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
