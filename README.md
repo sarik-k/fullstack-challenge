@@ -1,3 +1,8 @@
+## Update
+- run `php artisan migrate`
+- run `php artisan report:sync` to fetch the weather data initially
+- run `php artisan queue:work` to run scheduled job for fetching data
+
 # Fullstack Challenge
 
 ## Instructions

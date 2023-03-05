@@ -1,5 +1,7 @@
 <?php
 
+use App\Jobs\FetchWeatherReport;
+use App\Services\WeatherService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/users', function () {
     return response()->json([
-        'message' => 'all systems are a go',
-        'users' => \App\Models\User::all(),
+        'message' => 'Successfully fetched all users',
+        'users' => \App\Models\User::with('weather_report')->get(),
     ]);
 });
