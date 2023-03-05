@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/users', function () {
+Route::get('/', function () {
     return response()->json([
         'message' => 'Successfully fetched all users',
         'users' => \App\Models\User::with('weather_report')->get(),
